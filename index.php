@@ -30,12 +30,13 @@ if(isset($_GET['logout'])){
 function loginForm(){
     echo
     '<div id="loginform">
-    <p>立即輸入暱稱 開始聊天吧</p>
+    <p>立即輸入暱稱 開始聊天吧</p><p>E4S Web Simple Chat v.0.2</p>
     <form action="index.php" method="post">
       <label for="name">暱稱 &mdash;</label>
       <input type="text" name="name" id="name" />
       <input type="submit" name="enter" id="enter" value="開始" />
     </form>
+    <a href="https://github.com/EarthlyEric/SIMPLE-CHAT"><img src="GitHub-Mark-32px.png"></a>
   </div>';
 }
  
