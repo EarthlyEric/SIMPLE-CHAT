@@ -1,7 +1,22 @@
 <?php
  
 session_start();
- 
+
+if(isset($_POST['enter'])){
+    if($_POST['name'] != ""){
+        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+    }
+    else{
+        echo '<span class="error">請輸入暱稱</span>';
+    }
+}
+
+if(isset($_POST['enter'])){
+    
+    $login_message = "<div class='msgln'><span class='left-info'>使用者 <b class='user-name-left'>". $_SESSION['name'] ."</b> 加入聊天SKR.</span><br></div>";
+    file_put_contents("log.html", $login_message, FILE_APPEND | LOCK_EX);
+}
+
 if(isset($_GET['logout'])){    
      
     //Simple exit message
@@ -10,15 +25,6 @@ if(isset($_GET['logout'])){
      
     session_destroy();
     header("Location: index.php"); //Redirect the user
-}
- 
-if(isset($_POST['enter'])){
-    if($_POST['name'] != ""){
-        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
-    }
-    else{
-        echo '<span class="error">請輸入暱稱</span>';
-    }
 }
  
 function loginForm(){
