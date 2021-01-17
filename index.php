@@ -46,6 +46,7 @@ function loginForm(){
 <html lang="zh_tw">
     <head>
         <meta charset="utf-8" />
+        <link rel="Shortcut Icon" type="image/x-icon" href="E4S_ICON.ico" />
  
         <title>E4S CHAT</title>
         <meta name="description" content="E4S CHAT" />
