@@ -30,7 +30,8 @@ if(isset($_GET['logout'])){
 function loginForm(){
     echo
     '<div id="loginform">
-    <p>立即輸入暱稱 開始聊天吧</p><p>E4S Web Simple Chat v.0.2</p>
+    <p>E4S Web Simple Chat v.0.3</v></p>
+    <p>立即輸入暱稱 開始聊天吧</p>
     <form action="index.php" method="post">
       <label for="name">暱稱 &mdash;</label>
       <input type="text" name="name" id="name" />
