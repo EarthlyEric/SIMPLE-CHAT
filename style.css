@@ -137,6 +137,18 @@
     margin: 0 5px 0 0;
   }
    
+  .msgln b.user-name, .msgln b.user-name-come {
+    font-weight: bold;
+    background: #546e7a;
+    color: white;
+    padding: 2px 4px;
+    font-size: 90%;
+    border-radius: 4px;
+    margin: 0 5px 0 0;
+  }
   .msgln b.user-name-left {
-    background: orangered;
+    background: rgb(0, 255, 34);
+  }
+  .msgln b.user-name-come {
+    background: rgb(0, 217, 255);
   }
