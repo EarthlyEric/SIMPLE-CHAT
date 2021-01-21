@@ -109,7 +109,7 @@ function loginForm(){
                     });
                 }
  
-                setInterval (loadLog, 2500);
+                setInterval (loadLog, 100);
  
                 $("#exit").click(function () {
                     var exit = confirm("你確定登出?");
