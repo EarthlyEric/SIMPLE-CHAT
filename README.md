@@ -1,6 +1,8 @@
 # SIMPLE-CHAT[![Run on Repl.it](https://repl.it/badge/github/EarthlyEric/SIMPLE-CHAT)](https://repl.it/github/EarthlyEric/SIMPLE-CHAT)
 
-參考程式來源:https://code.tutsplus.com/tutorials/how-to-create-a-simple-web-based-chat-application--net-5931
+參考程式來源:
+https://code.tutsplus.com/tutorials/how-to-create-a-simple-web-based-chat-application--net-5931
+https://blog.xuite.net/mos1618/love/10035522
 ![GITHUB]( 圖片網址 "圖片名稱")
 
 THANKS FOR 👍 https://gonative.io/
