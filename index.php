@@ -30,7 +30,7 @@ if(isset($_GET['logout'])){
 function loginForm(){
     echo
     '<div id="loginform">
-    <p>E4S Web Simple Chat v.0.3</v></p>
+    <p>E4S Web Simple Chat v.0.4</v></p>
     <p>立即輸入暱稱 開始聊天吧</p>
     <form action="index.php" method="post">
       <label for="name">暱稱 &mdash;</label>
@@ -38,7 +38,9 @@ function loginForm(){
       <input type="submit" name="enter" id="enter" value="開始" />
     </form>
     <a href="https://github.com/EarthlyEric/SIMPLE-CHAT"><img src="GitHub-Mark-32px.png"></a>
-  </div>';
+  </div>
+  <embed src="SCP-Breach.mp3" autostart="true" hidden="true" loop="1" volume="25" width="0" height=0></embed>
+  ';
 }
  
 ?>
@@ -89,8 +91,9 @@ function loginForm(){
                     $.post("post.php", { text: clientmsg });
                     $("#usermsg").val("");
                     return false;
+                    echo 'call sound function';
                 });
- 
+
                 function loadLog() {
                     var oldscrollHeight = $("#chatbox")[0].scrollHeight - 20; //Scroll height before the request
  
