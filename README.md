@@ -5,13 +5,12 @@
 3.登入和登出自動顯示在公共頻到道中
 4.自動註記訊息發出時間
 5.高度可自定義
-
 # 參考程式來源:
 https://code.tutsplus.com/tutorials/how-to-create-a-simple-web-based-chat-application--net-5931
 https://blog.xuite.net/mos1618/love/10035522
-![GITHUB]( 圖片網址 "圖片名稱")
-
 # 感謝👍 https://gonative.io/
 # 程式碼來自https://home.error404studios.ml
 製作
+![GITHUB]( 圖片網址 "圖片名稱")
+
 
