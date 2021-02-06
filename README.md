@@ -1,4 +1,4 @@
-# 簡單聊天[![Run on Repl.it](https://repl.it/badge/github/EarthlyEric/SIMPLE-CHAT)](https://repl.it/github/EarthlyEric/SIMPLE-CHAT)
+# 簡單聊天-zh_tw[![Run on Repl.it](https://repl.it/badge/github/EarthlyEric/SIMPLE-CHAT)](https://repl.it/github/EarthlyEric/SIMPLE-CHAT)
 # 功能
 * 1.登入頁面
 * 2.依賴程式庫已打包在程式碼發布包中
