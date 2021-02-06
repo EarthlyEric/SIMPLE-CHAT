@@ -12,5 +12,5 @@ https://blog.xuite.net/mos1618/love/10035522
 ![GITHUB]( 圖片網址 "圖片名稱")
 
 # THANKS FOR 👍 https://gonative.io/
-by https://home.error404studios.ml
+# Code by https://home.error404studios.ml
 
