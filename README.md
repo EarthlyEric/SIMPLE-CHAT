@@ -9,8 +9,8 @@
 * https://code.tutsplus.com/tutorials/how-to-create-a-simple-web-based-chat-application--net-5931
 * https://blog.xuite.net/mos1618/love/10035522
 # 感謝👍 https://gonative.io/
-# 程式碼來自https://home.error404studios.ml
-製作
+# 程式碼來自https://home.error404studios.ml製作
+
 ![GITHUB]( 圖片網址 "圖片名稱")
 # Simple Chat-en_us[![Run on Repl.it](https://repl.it/badge/github/EarthlyEric/SIMPLE-CHAT)](https://repl.it/github/EarthlyEric/SIMPLE-CHAT)
 
