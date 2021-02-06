@@ -12,5 +12,7 @@
 # 程式碼來自https://home.error404studios.ml
 製作
 ![GITHUB]( 圖片網址 "圖片名稱")
+# Simple Chat-en_us[![Run on Repl.it](https://repl.it/badge/github/EarthlyEric/SIMPLE-CHAT)](https://repl.it/github/EarthlyEric/SIMPLE-CHAT)
+
 
 
