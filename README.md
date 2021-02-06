@@ -1,4 +1,4 @@
-# SIMPLE-CHAT[![Run on Repl.it](https://repl.it/badge/github/EarthlyEric/SIMPLE-CHAT)](https://repl.it/github/EarthlyEric/SIMPLE-CHAT)
+# 簡單聊天[![Run on Repl.it](https://repl.it/badge/github/EarthlyEric/SIMPLE-CHAT)](https://repl.it/github/EarthlyEric/SIMPLE-CHAT)
 # 功能
 1.登入頁面
 2.依賴程式庫已打包在程式碼發布包中
@@ -11,6 +11,7 @@ https://code.tutsplus.com/tutorials/how-to-create-a-simple-web-based-chat-applic
 https://blog.xuite.net/mos1618/love/10035522
 ![GITHUB]( 圖片網址 "圖片名稱")
 
-# THANKS FOR 👍 https://gonative.io/
-# Code by https://home.error404studios.ml
+# 感謝👍 https://gonative.io/
+# 程式碼來自https://home.error404studios.ml
+製作
 
