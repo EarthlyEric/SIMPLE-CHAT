@@ -38,11 +38,12 @@
   #loginform {
     margin: 0 auto;
     padding-bottom: 25px;
-    background: #eee;
+    background: rgb(111, 98, 231);
     width: 600px;
     max-width: 100%;
     border: 2px solid #212121;
     border-radius: 4px;
+    opacity: 100;
   }
    
   #loginform {
@@ -152,3 +153,4 @@
   .msgln b.user-name-come {
     background: rgb(0, 217, 255);
   }
+  
