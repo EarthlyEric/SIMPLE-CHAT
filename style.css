@@ -8,6 +8,8 @@
     font-family: "Lato";
     font-weight: 300;
   }
+  
+    
    
   form {
     padding: 15px 25px;
@@ -34,7 +36,17 @@
     text-decoration: underline;
   }
    
-  #wrapper,
+  #wrapper{
+    margin: 0 auto;
+    padding-bottom: 25px;
+    background: rgb(111, 98, 231);
+    width: 600px;
+    max-width: 100%;
+    border: 2px solid #212121;
+    border-radius: 4px;
+    opacity: 100;
+    
+  }
   #loginform {
     margin: 0 auto;
     padding-bottom: 25px;
@@ -44,7 +56,9 @@
     border: 2px solid #212121;
     border-radius: 4px;
     opacity: 100;
+    
   }
+  
    
   #loginform {
     padding-top: 18px;
@@ -153,4 +167,5 @@
   .msgln b.user-name-come {
     background: rgb(0, 217, 255);
   }
+  
   

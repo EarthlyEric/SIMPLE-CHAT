@@ -2,6 +2,14 @@
  
 session_start();
 
+//取得IP
+if (!empty($_SERVER["HTTP_CLIENT_IP"])){
+    $ip = $_SERVER["HTTP_CLIENT_IP"];
+}elseif(!empty($_SERVER["HTTP_X_FORWARDED_FOR"])){
+    $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+}else{
+    $ip = $_SERVER["REMOTE_ADDR"];
+}
 if(isset($_POST['enter'])){
     if($_POST['name'] != ""){
         $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
@@ -26,12 +34,11 @@ if(isset($_GET['logout'])){
     session_destroy();
     header("Location: index.php"); 
 }
- 
+
 function loginForm(){
     echo '
-    
             <div id="loginform">
-            <p>E4S Web Simple Chat v.0.4</v></p>
+            <p>E4S Web Simple Chat v.0.4.1</v></v></p>
             <p>立即輸入暱稱 開始聊天吧</p>
             <form action="index.php" method="post">
               <label for="name">暱稱 &mdash;</label>
@@ -62,10 +69,10 @@ function loginForm(){
         loginForm();
     }
     else {
-    ?>
+    ?>  
         <div id="wrapper">
             <div id="menu">
-                <p class="welcome">歡迎, <b><?php echo $_SESSION['name']; ?>進入聊天室</b></p>
+                <p class="welcome">歡迎, <b><?php echo $_SESSION['name']; ?>進入聊天室<p class="IP">>>[IP=<?php echo $ip; ?>]<<</p></b></p>
                 <p class="logout"><a id="exit" href="#">離開聊天</a></p>
             </div>
  
@@ -77,7 +84,7 @@ function loginForm(){
             }
             ?> 
             </div>
-            <form name="message" action="">
+            <form name="message" action="post.php">
                 <input name="usermsg" type="text" id="usermsg" />
                 <input name="submitmsg" type="submit" id="submitmsg" value="傳送" />
             </form>
