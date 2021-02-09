@@ -1,15 +1,35 @@
 <?php
- 
+//用戶UUID紀錄開始 
 session_start();
 
 //取得IP
-if (!empty($_SERVER["HTTP_CLIENT_IP"])){
-    $ip = $_SERVER["HTTP_CLIENT_IP"];
-}elseif(!empty($_SERVER["HTTP_X_FORWARDED_FOR"])){
-    $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+    //ip internet
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+}elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+    //ip  proxy
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 }else{
-    $ip = $_SERVER["REMOTE_ADDR"];
+    $ip = $_SERVER['REMOTE_ADDR'];
 }
+//
+$ip2 = $ip; 
+$s = file_get_contents('http://ip2c.org/'.$ip2);
+switch($s[0])
+{
+  case '0':
+    $ipshow = '不明錯誤';
+    break;
+  case '1':
+    $reply = explode(';',$s);
+    $ipshow = $reply[3];
+    break;
+  case '2':
+    $ipshow = '無資料';
+    break;
+}
+
+//用戶
 if(isset($_POST['enter'])){
     if($_POST['name'] != ""){
         $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
@@ -38,7 +58,7 @@ if(isset($_GET['logout'])){
 function loginForm(){
     echo '
             <div id="loginform">
-            <p>E4S Web Simple Chat v.0.4.1</v></v></p>
+            <p>E4S Web Simple Chat v.0.5.1</v></v></v></p>
             <p>立即輸入暱稱 開始聊天吧</p>
             <form action="index.php" method="post">
               <label for="name">暱稱 &mdash;</label>
@@ -72,7 +92,7 @@ function loginForm(){
     ?>  
         <div id="wrapper">
             <div id="menu">
-                <p class="welcome">歡迎, <b><?php echo $_SESSION['name']; ?>進入聊天室<p class="IP">>>[IP=<?php echo $ip; ?>]<<</p></b></p>
+                <p class="welcome">歡迎, <b><?php echo $_SESSION['name']; ?>進入聊天室<p class="IP">>>[IP=<?php echo $ip; ?>][國家:<?php echo $ipshow; ?>]<<</p></b></p>
                 <p class="logout"><a id="exit" href="#">離開聊天</a></p>
             </div>
  
