@@ -1,33 +1,9 @@
 <?php
 //用戶UUID紀錄開始 
 session_start();
+$get_config_index = file_get_contents("json\config.json");
+$data = json_decode($get_config_index, true);
 
-//取得IP
-if(!empty($_SERVER['HTTP_CLIENT_IP'])){
-    //ip internet
-    $ip = $_SERVER['HTTP_CLIENT_IP'];
-}elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-    //ip  proxy
-    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-}else{
-    $ip = $_SERVER['REMOTE_ADDR'];
-}
-//
-$ip2 = $ip; 
-$s = file_get_contents('http://ip2c.org/'.$ip2);
-switch($s[0])
-{
-  case '0':
-    $ipshow = '不明錯誤';
-    break;
-  case '1':
-    $reply = explode(';',$s);
-    $ipshow = $reply[3];
-    break;
-  case '2':
-    $ipshow = '無資料';
-    break;
-}
 
 //用戶
 if(isset($_POST['enter'])){
@@ -57,6 +33,17 @@ if(isset($_GET['logout'])){
 
 function loginForm(){
     echo '
+     <head>
+     <style>
+       body {
+        background-image: url("img/backgroud.jpg");
+        background-repeat: no-repeat, repeat;
+        background-color: rgb(255,255,255);
+        background-position:left top;
+      }
+      </style>
+      </head>
+            <div id="backgroudlogin">
             <div id="loginform">
             <p>E4S Web Simple Chat v.0.5.1</v></v></v></p>
             <p>立即輸入暱稱 開始聊天吧</p>
@@ -68,6 +55,7 @@ function loginForm(){
             <a href="https://github.com/EarthlyEric/SIMPLE-CHAT"><img src="/img/Github/GitHub-Mark-32px.png"></a>
             <a href="scp-music-player.html"><img src="/img/SCP/SCPICON32X.png"></a>
             <embed src="audio\SCP-Breach.mp3" autostart="true" hidden="true" loop="1" volume="25" width="0" height="0" controls="volumelever"></embed>
+            </div>
             </div>
             ';
 } 
@@ -89,6 +77,31 @@ function loginForm(){
         loginForm();
     }
     else {
+        
+     //取得IP
+     if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+     $ip = $_SERVER['HTTP_CLIENT_IP'];
+    }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }else{
+    $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    //IP更多資料
+    $ip2 = $ip; 
+    $s = file_get_contents('http://ip2c.org/'.$ip2);
+    switch($s[0])
+    {
+    case '0':
+    $ipshow = '不明錯誤';
+    break;
+    case '1':
+    $reply = explode(';',$s);
+    $ipshow = $reply[3];
+    break;
+    case '2':
+    $ipshow = '無資料';
+    break;
+    }
     ?>  
         <div id="wrapper">
             <div id="menu">
