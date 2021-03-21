@@ -38,14 +38,14 @@ function loginForm(){
        body {
         background-image: url("img/backgroud.jpg");
         background-repeat: no-repeat, repeat;
-        background-color: rgb(255,255,255);
+        background-color: rgb(0, 0, 0);
         background-position:left top;
       }
       </style>
       </head>
             <div id="backgroudlogin">
             <div id="loginform">
-            <p>E4S Web Simple Chat v.0.5.1</v></v></v></p>
+            <p>R.Dev Web Simple Chat v.0.5.1</v></v></v></p>
             <p>立即輸入暱稱 開始聊天吧</p>
             <form action="index.php" method="post">
               <label for="name">暱稱 &mdash;</label>

@@ -57,11 +57,14 @@
     margin: 0 auto;
     padding-bottom: 25px;
     background: rgb(251, 252, 233);
-    width: 600px;
-    max-width: 100%;
+    width: 750px;
+    max-width: 150%;
     border: 2px solid #212121;
     border-radius: 4px;
     opacity: 100;
+    position: absolute;
+    top: 530px
+
     
   }
   
@@ -174,7 +177,5 @@
   .msgln b.user-name-come {
     background: rgb(0, 217, 255);
   }
-  #backgroudlogin{
-    background-image: url(alice.jpg);
-  }
+ 
   
