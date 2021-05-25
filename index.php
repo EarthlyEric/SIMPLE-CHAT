@@ -3,8 +3,8 @@
 session_start();
 $get_config_index = file_get_contents("json\config.json");
 $data = json_decode($get_config_index, true);
-
-
+$data['install'] = $install;
+if($install= 1){
 //用戶
 if(isset($_POST['enter'])){
     if($_POST['name'] != ""){
@@ -32,7 +32,8 @@ if(isset($_GET['logout'])){
 }
 
 function loginForm(){
-    echo '
+    echo 
+    '
      <head>
      <style>
        body {
@@ -45,7 +46,7 @@ function loginForm(){
       </head>
             <div id="backgroudlogin">
             <div id="loginform">
-            <p>R.Dev Web Simple Chat v.0.5.1</v></v></v></p>
+            <p>R.Dev Web Simple Chat <php</v></v></v></p>
             <p>立即輸入暱稱 開始聊天吧</p>
             <form action="index.php" method="post">
               <label for="name">暱稱 &mdash;</label>
@@ -127,5 +128,6 @@ function loginForm(){
     </body>
 </html>
 <?php
+    };
 }
 ?>
