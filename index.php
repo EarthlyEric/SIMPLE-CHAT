@@ -37,10 +37,10 @@ function loginForm(){
      <head>
      <style>
        body {
-        background-image: url("img/backgroud.jpg");
+        background-image: url("img/backgroud.png");
         background-repeat: no-repeat, repeat;
         background-color: rgb(0, 0, 0);
-        background-position:left top;
+        background-position:center;
       }
       </style>
       </head>
